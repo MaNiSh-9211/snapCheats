@@ -1,0 +1,189 @@
+/* About Section Styling */
+body {
+    margin: 0;
+    padding-top: 5vh;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+/* Navbar Styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh; /* Fixed height */
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    padding: 0 20px;
+    border-radius: 1px; /* Border radius of 1px */
+    border: 1px solid black; /* Small border */
+    border-bottom:2px solid black ;    /* box-shadow: 20px 10px rgba(0, 0, 0, 0.3); Right-side shadow */
+    flex-wrap: wrap; /* Allows wrapping for small screens */
+}
+
+/* Left side - logo and site name */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    height: 6vh;
+    /* box-shadow: 20px 10px rgba(0, 0, 0, 0.3); Right-side shadow on div */
+    border-radius: 1px;
+}
+
+.logo {
+    transition: transform 0.3s ease; /* Smooth transition */
+    height: 6vh; /* Adjust the height of the logo */
+    margin-right: 10px;}
+
+/* Hover effect for logo */
+.logo:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover (10% bigger) */
+}
+
+.site-name {
+    font-size: 3.5vh;
+    font-weight: bold;
+    color: black;
+}
+
+/* Right side - buttons and links */
+.navbar-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures buttons wrap for smaller screens */
+    margin-right: 5vw;
+}
+
+/* Buttons styling with shadow and hover effect */
+.about, .node-modules, .access {
+    color: black;
+    margin: 5px 2vw;
+    font-weight: bold;
+    font-size: 2.5vh; /* Font size reduced for responsiveness */
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 1px; /* Border radius of 1px */
+    border: 2px solid black;
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 20px 10px rgba(0, 0, 0, 0.3); /* Right-side shadow */
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+    position: relative; /* Needed for the inner border effect */
+    box-sizing: border-box; /* Ensures padding and border behave correctly */
+}
+
+/* Hover effect for buttons */
+.about:hover, .node-modules:hover, .access:hover {
+    border-color: #F33A6A;
+    box-shadow: 20px 10px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+    padding: 10px 20px; /* Keep padding the same so no layout shifting */
+    border-width: 2px; /* Keep border width same */
+    outline: 3px solid #F33A6A; /* Add inner border effect inside without resizing */
+}
+.pink {
+    color: #F33A6A;
+}
+
+/* Divider Styles */
+.divider {
+    height: 6vh;
+    border-left: 5px solid black;
+    margin: 0 10px;
+}
+
+/* About Section */
+.about-section {
+    padding: 80px 20px;
+    background-color: #f8f9fa;
+    color: #333;
+    border-radius: 8px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    text-align: center;
+}
+
+.about-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #E20000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* This was restored for red-colored Note */
+.about-section strong {
+    color: #e60000;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .navbar-left {
+        margin-bottom: 10px;
+        justify-content: center;
+    }
+
+    .site-name {
+        font-size: 2.5vh; /* Adjust the size for smaller screens */
+    }
+
+    .about, .node-modules, .access {
+        font-size: 2vh; /* Smaller font on small screens */
+        padding: 8px 15px; /* Reduce padding for smaller screens */
+    }
+
+    .submit-button, .delete-button {
+        font-size: 14px; /* Smaller font for buttons */
+        padding: 8px 15px;
+    }
+
+    textarea {
+        font-size: 14px; /* Adjust font size for better readability */
+    }
+}
+
+@media (max-width: 480px) {
+    .about, .node-modules, .access {
+        font-size: 1.8vh; /* Further reduction for very small screens */
+        margin: 5px 1vw; /* Reduce margin on small screens */
+    }
+
+    .submit-button, .delete-button {
+        font-size: 12px; /* Adjust for very small screens */
+        padding: 5px 10px;
+    }
+
+    .navbar-right {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+
+    nav {
+        padding: 10px;
+    }
+
+    .site-name {
+        font-size: 2vh;
+    }
+}
+
