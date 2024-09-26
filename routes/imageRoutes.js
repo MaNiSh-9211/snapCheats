@@ -3,6 +3,10 @@ const router = express.Router();
 const Question = require('../models/question'); // Adjust to your model
 const Response = require('../models/response'); // Import the Response model
 
+
+// router.get('/favicon.png', (req, res) => {
+//     res.status(204).send();  // Send an empty response with no content
+//   });
 // Upload image route
 router.post('/upload', async (req, res) => {
     console.log('Incoming request body:', req.body); // Log incoming request body
